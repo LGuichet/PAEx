@@ -72,11 +72,10 @@ defmodule PAEx.Repo.Migrations.CreateInvoices do
       add :to_status, :string, null: false
       add :triggered_by, :string
       add :note, :string, size: 1000
-
-      timestamps(type: :utc_datetime_usec, updated_at: false)
+      add :occurred_at, :utc_datetime_usec, null: false
     end
 
     create index(:invoice_status_events, [:invoice_id])
-    create index(:invoice_status_events, [:inserted_at])
+    create index(:invoice_status_events, [:occurred_at])
   end
 end

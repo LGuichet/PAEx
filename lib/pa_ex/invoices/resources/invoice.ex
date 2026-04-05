@@ -322,7 +322,7 @@ defmodule PAEx.Invoices.Invoice do
       accept []
 
       validate attribute_in(:status, [:emise, :acceptee, :mise_en_paiement]) do
-        message "Invoice must be emised, accepted, or in payment to be disputed"
+        message "Invoice must be emitted, accepted, or in payment to be disputed"
       end
 
       change set_attribute(:status, :en_litige)

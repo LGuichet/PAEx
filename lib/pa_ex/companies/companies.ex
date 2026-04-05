@@ -5,7 +5,7 @@ defmodule PAEx.Companies do
 
   A company is identified by its SIREN number (9 digits, unique per legal entity)
   and may have one or more establishments identified by their SIRET number (14
-  digits: SIREN + 5-digit establishment suffix).  The `recipient_id` field
+  digits: SIREN + 5-digit establishment suffix).  The `ppf_routing_id` field
   stores the identifier in the national PPF directory, which is required to
   route incoming invoices.
   """
